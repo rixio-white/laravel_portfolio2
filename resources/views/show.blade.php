@@ -12,14 +12,13 @@
     </head>
     <body>
         <h1>Blog Name未定</h1>
-        <div class="posts">
-            @foreach ($posts as $post)
-                <div class="post1">
-                    <a href='/posts/{{ $post->id }}'><h2 class="title">{{ $post->title }}</h2></a>
-                    <p class=body>{{ $post -> body }}</p>
-                </div>
-            @endforeach
-        </div>
+            <div class="post1">
+                <h2 class="title">{{ $post->title }}</h2>
+                <p class=body>{{ $post -> body }}</p>
+                <p class=updated_at>{{ $post -> updated_at }}</p>
+            </div>
+            <div class="back">[<a href='/'>back</a>]</div>
+            </div>
         
     </body>
 </html>
