@@ -12,6 +12,7 @@
     </head>
     <body>
         <h1>Blog Name未定</h1>
+        <p class="create">[<a href='posts/create'>作品の投稿</a>]</p>
         <div class="posts">
             @foreach ($posts as $post)
                 <div class="post1">
