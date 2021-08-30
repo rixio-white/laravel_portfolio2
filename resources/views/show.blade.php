@@ -13,6 +13,12 @@
     <body>
         <h1>Blog Name未定</h1>
             <p class='edit'>[<a href="/posts/{{ $post->id }}/edit">投稿の編集</a>]</p>
+            <form action="/posts/{{ $post->id }}" id="form_delete" method="post">
+                {{ csrf_field() }}
+                {{method_field('delete') }}
+                <input type"submit" style="display:none">
+                <p class='delete'>[<span onclick="return deletePost(this);">投稿の削除</span>]</p>
+            </form>
             <div class="post1">
                 <h2 class="title">{{ $post->title }}</h2>
                 <p class=body>{{ $post -> body }}</p>
@@ -20,6 +26,15 @@
             </div>
             <div class="back">[<a href='/'>戻る</a>]</div>
             </div>
+            <script>
+                function deletePost(e) {
+                    'use strict';
+                    if (confirm('削除すると投稿を復元できません。\n本当に削除しますか？'))
+                    {
+                        document.getElementById('form_delete').submit();
+                    }
+                }
+            </script>
         
     </body>
 </html>
