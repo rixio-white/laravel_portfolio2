@@ -12,12 +12,13 @@
     </head>
     <body>
         <h1>Blog Name未定</h1>
+            <p class='edit'>[<a href="/posts/{{ $post->id }}/edit">投稿の編集</a>]</p>
             <div class="post1">
                 <h2 class="title">{{ $post->title }}</h2>
                 <p class=body>{{ $post -> body }}</p>
                 <p class=updated_at>{{ $post -> updated_at }}</p>
             </div>
-            <div class="back">[<a href='/'>back</a>]</div>
+            <div class="back">[<a href='/'>戻る</a>]</div>
             </div>
         
     </body>
