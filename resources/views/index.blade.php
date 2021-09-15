@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>未定</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
-
-    </head>
-    <body>
+@section('content')
         <h1>Blog Name未定</h1>
         <p class="create">[<a href='posts/create'>作品の投稿</a>]</p>
         <div class="posts">
@@ -21,6 +11,4 @@
                 </div>
             @endforeach
         </div>
-        
-    </body>
-</html>
+@endsection
